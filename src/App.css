@@ -1,0 +1,99 @@
+* {
+  outline: none;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, a, span, button {
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-app-region: drag;
+}
+
+body {
+  font-family: sans-serif;
+  color: #000;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+section {
+  box-sizing: border-box;
+  padding: 2rem;
+  position: relative;
+  height: calc(100vh - 4rem);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+ol.unstyle {
+  list-style: none inside;
+  padding-left: 0;
+}
+
+.button {
+  background-color: #FFFFFF;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 14px;
+  -webkit-app-region: no-drag;
+}
+
+  .button a {
+    text-decoration: none;
+    color: #1B1B1B;
+  }
+
+.button:focus {
+  background-color: #EFEFEF;
+  color: #1B1B1B;
+}
+
+.button:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+.button--primary {
+  background-color: #000;
+  color: #FFF;
+}
+
+.button--primary:focus {
+  background-color: #000;
+  color: #FFF;
+}
+
+.button--primary:disabled {
+  background-color: #7D7D7D;
+}
+
+/*.Structure */
+.hide {
+  display: none;
+}
+
+.text {}
+
+.actions {
+  text-align: right;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
