@@ -8,6 +8,8 @@ import {
 import './App.css';
 
 import Start from "./components/Start";
+import AddBeacon from "./components/AddBeacon";
+import AddValidator from "./components/AddValidator";
 
 import AppStore from "./stores/AppStore";
 
@@ -16,6 +18,8 @@ export default class App extends React.Component {
 		return (
 			<Router>
 				<Route path="/" exact component={Start} />
+				<Route path="/add-beacon" exact component={AddBeacon} />
+				<Route path="/add-validator" exact component={AddValidator} />
 			</Router>
 		);
 	}
