@@ -35,7 +35,7 @@ export default class Start extends React.Component<IAppProps, IAppState> {
 
     handleChange(event: any) {
         let value = event.target.value;
-        AppActions.saveKeyToStore(value);
+        //AppActions.saveKeyToStore(value);
     }
 
     public render() {
@@ -43,8 +43,8 @@ export default class Start extends React.Component<IAppProps, IAppState> {
             <section>
                 <article className="text">
                     <h1>Connect to a Beacon Chain node</h1>
-                    <p><input type="text" placeholder="Name" onChange={this.handleChange} value={this.state.account!.beaconName} /></p>
-                    <p><input type="text" placeholder="REST API" onChange={this.handleChange} value={this.state.account!.beaconAPI} /></p>
+                    <p><input type="text" placeholder="Name" onChange={this.handleChange} /*value={ this.state.account!.beaconName }*/ /></p>
+                    <p><input type="text" placeholder="REST API" onChange={this.handleChange} /*value={ this.state.account!.beaconAPI }*/ /></p>
                     {/* <textarea
                         placeholder="Separate each word with a single space"
                         value={this.state.account!.privateKeySeed}
