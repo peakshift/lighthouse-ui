@@ -219,3 +219,22 @@ input {
 .graph-holder p {
    font-weight: bold;
 }
+
+.banner {
+  background-color: #FFF4D8;
+  color: #333;
+  border: 1px solid #FFEEC3;
+  padding: 1rem;
+  border-radius: 3px;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.banner h4 {
+  text-transform: uppercase;
+}
+
+.banner * {
+  margin: 0;
+}
+

@@ -48,6 +48,11 @@ export default class ConnectBeacon extends React.Component<IAppProps, IAppState>
             <section>
                 <article className="text">
                     <h1>Connect to a new Beacon node</h1>
+                    <div className="banner">
+                        <h4>Need help?</h4>
+                        <p>The beacon node needs to have it's REST API exposed. The <code>--http</code> flag starts the API so the validator can produce blocks.</p>
+                        <p><a href="https://lighthouse-book.sigmaprime.io/simple-testnet.html" target="_blank">Documentation</a></p>
+                    </div>
                     <p>
                         <strong>NAME</strong><br/>
                         <input type="text" placeholder="Name this cluster" onChange={this.handleChange} />

@@ -93,16 +93,25 @@ export default class ViewBeacon extends React.Component<IAppProps, IAppState> {
                             <li>Syncing State: <span className="badge">SYNC_STATE</span></li>
                         </ul>
                     </p>
-                    <div className="graph-holder">
-                        <div>
-                            {renderBarChart1}
-                            <p>Balance</p>
-                        </div>
-                        <div>
-                            {renderBarChart2}
-                            <p>Slot</p>
-                        </div>
+                    <div className="aggregates">
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
                     </div>
+                    <List />
                 </section>
             </div>
         );
