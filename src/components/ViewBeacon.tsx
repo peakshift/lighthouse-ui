@@ -1,10 +1,13 @@
 import React from "react";
+import {
+    Link
+} from "react-router-dom";
 import AppActions from "../actions/AppActions";
 import AppStore from "../stores/AppStore";
 
 import List from "../components/List";
 
-export default class ConnectValidator extends React.Component<IAppProps, IAppState> {
+export default class ViewBeacon extends React.Component<IAppProps, IAppState> {
 
     public state: IAppState = AppStore.getValues();
 
@@ -45,9 +48,8 @@ export default class ConnectValidator extends React.Component<IAppProps, IAppSta
         return (
             <div>
                 <section>
-                    <h2>Validator List</h2>
-                    <button className="button-actions">Create Validator</button>
-                    <List />
+                    <h1><Link to="/list-beacons">Beacon Chain List</Link> / Beacon Name</h1>
+                    <Link to="/add-validator"><button className="button-actions">Create Validator</button></Link>
                 </section>
             </div>
         );

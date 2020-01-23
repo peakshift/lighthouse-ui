@@ -1,5 +1,7 @@
 * {
    outline: none;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
 
 p,
@@ -60,15 +62,14 @@ ol.unstyle {
 }
 
 .button {
-   background-color: #ffffff;
+   background-color: #ddd;
    color: #000;
    padding: 0.5rem 1rem;
    border: none;
    font-weight: bold;
-   font-size: 18px;
+   font-size: 20px;
    border-radius: 3px;
    cursor: pointer;
-   margin-left: 14px;
    -webkit-app-region: no-drag;
 }
 
@@ -123,4 +124,38 @@ input {
    position: absolute;
    bottom: 2rem;
    right: 2rem;
+}
+
+.status--ready {
+   background: #2323ff;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+
+.status--running {
+   background: #009900;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+
+.status--stopped {
+   background: #b81515;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+.tags {
+   background: #888;
+   color: white;
+   text-decoration: underline;
+   padding: 5px 10px;
+   border-radius: 20px;
+}
+.button-actions {
+   background: #555;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 5px;
 }

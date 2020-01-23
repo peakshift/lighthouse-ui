@@ -56,7 +56,7 @@ function List() {
     const columns = React.useMemo(
         () => [
             {
-                Header: 'Name',
+                Header: 'Validators',
                 columns: [
                     {
                         Header: 'Validator Key',
@@ -72,28 +72,12 @@ function List() {
                         accessor: 'status',
                     },
                     {
-                        Header: 'Withdrawal Credentials',
-                        accessor: 'withdrawal_credentials',
+                        Header: 'Tags',
+                        accessor: 'tags',
                     },
                     {
-                        Header: 'Balance',
-                        accessor: 'effective_balance',
-                    },
-                    {
-                        Header: 'Slashed',
-                        accessor: 'slashed',
-                    },
-                    {
-                        Header: 'Activation',
-                        accessor: 'activation_epoch',
-                    },
-                    {
-                        Header: 'Exit',
-                        accessor: 'exit_epoch',
-                    },
-                    {
-                        Header: 'Withdrawable',
-                        accessor: 'withdrawable_epoch',
+                        Header: 'Actions',
+                        accessor: 'actions',
                     }
                 ],
             },
@@ -105,7 +89,6 @@ function List() {
 
     return (
         <div>
-            <CssBaseline />
             <Table columns={columns} data={data} />
         </div>
     )

@@ -1,8 +1,11 @@
 import React from "react";
+import {
+    Link
+} from "react-router-dom";
 import AppActions from "../actions/AppActions";
 import AppStore from "../stores/AppStore";
 
-export default class AddBeacon extends React.Component<IAppProps, IAppState> {
+export default class AddValidator extends React.Component<IAppProps, IAppState> {
 
     public state: IAppState = AppStore.getValues();
 
@@ -30,26 +33,20 @@ export default class AddBeacon extends React.Component<IAppProps, IAppState> {
     }
 
     handleNext(): void {
-        this.props.history.push("/view-beacon");
-    }
-
-    handleChange(event: any) {
-        let value = event.target.value;
-        //AppActions.saveKeyToStore(value);
+        this.props.history.push("/add-validator");
     }
 
     public render() {
         return (
             <section>
                 <article className="text">
-                    <h1>Connect to a Beacon Chain node</h1>
-                    <p><input type="text" placeholder="Name" onChange={this.handleChange} /*value={ this.state.account!.beaconName }*/ /></p>
-                    <p><input type="text" placeholder="REST API" onChange={this.handleChange} /*value={ this.state.account!.beaconAPI }*/ /></p>
-                    {/* <textarea
-                        placeholder="Separate each word with a single space"
-                        value={this.state.account!.privateKeySeed}
-                        onChange={this.handleChange}
-                    /> */}
+                    <h1><Link to="/list-beacons">Beacon Chain List</Link> / <Link to="/view-beacon">Beacon Name</Link> / Connect Validator</h1>
+                    <p><input type="text" placeholder="Name" /></p>
+                    <p><input type="text" placeholder="Deposit Value" /></p>
+                    <p><input type="text" placeholder="Eth1 Deposit Node" /></p>
+                    <p><input type="text" placeholder="Password" /></p>
+                    <p><input type="text" placeholder="Private Key" /></p>
+                    <p><input type="text" placeholder="Tags" /></p>
                 </article>
                 <nav className="actions">
                     <button
