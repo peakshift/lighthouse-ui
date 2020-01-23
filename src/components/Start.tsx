@@ -31,11 +31,11 @@ export default class Start extends React.Component<IAppProps, IAppState> {
 		);
 	}
 	handleTetiaryAction(): void {
-		this.props.history.push("/connect-validator");
+		this.props.history.push("/validators/connect");
 	}
 
 	handleSecondaryAction(): void {
-		this.props.history.push("/add-validator");
+		this.props.history.push("/validators/new");
 	}
 
 	handleNext(): void {

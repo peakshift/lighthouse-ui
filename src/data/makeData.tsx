@@ -1,5 +1,8 @@
 import namor from 'namor'
 import React from "react"
+import {
+    Link
+} from "react-router-dom";
 
 const range = (len: any) => {
     const arr = []
@@ -21,7 +24,7 @@ function generateRandomHash(length: any) {
 const newValidator = () => {
     const statusChance = Math.random()
     return {
-        validator_pubkey: `0x${generateRandomHash(6)}...${generateRandomHash(6)}`,
+        validator_pubkey: <Link to="/validators/xyz/0x0000000000000000000000000000000000000000">0x${generateRandomHash(6)}...${generateRandomHash(6)}</Link>,
         withdrawal_credentials: Math.floor(Math.random() * 30),
         effective_balance: Math.floor(Math.random() * 30),
         slashed: statusChance > 0.66

@@ -19,10 +19,6 @@ function GlobalFilter({
     preGlobalFilteredRows,
     globalFilter,
     setGlobalFilter,
-}: {
-    preGlobalFilteredRows: any,
-    globalFilter: any,
-    setGlobalFilter: any,
 }) {
     const count = preGlobalFilteredRows.length
 
@@ -47,8 +43,6 @@ function GlobalFilter({
 // Define a default UI for filtering
 function DefaultColumnFilter({
     column: { filterValue, preFilteredRows, setFilter },
-}: {
-    column: { filterValue: any, preFilteredRows: any, setFilter: any },
 }) {
     const count = preFilteredRows.length
 
@@ -67,8 +61,6 @@ function DefaultColumnFilter({
 // a unique option from a list
 function SelectColumnFilter({
     column: { filterValue, setFilter, preFilteredRows, id },
-}: {
-    column: { filterValue: any, setFilter: any, preFilteredRows: any, id: any },
 }) {
     // Calculate the options for filtering
     // using the preFilteredRows
@@ -103,8 +95,6 @@ function SelectColumnFilter({
 // min and max values
 function SliderColumnFilter({
     column: { filterValue, setFilter, preFilteredRows, id },
-}: {
-    column: { filterValue: any, setFilter: any, preFilteredRows: any, id: any },
 }) {
     // Calculate the min and max
     // using the preFilteredRows
@@ -140,8 +130,6 @@ function SliderColumnFilter({
 // ones that have values between the two
 function NumberRangeColumnFilter({
     column: { filterValue = [], preFilteredRows, setFilter, id },
-}: {
-    column: { filterValue: any, preFilteredRows: any, setFilter: any, id: any },
 }) {
     const [min, max] = React.useMemo(() => {
         let min = preFilteredRows.length ? preFilteredRows[0].values[id] : 0
@@ -197,7 +185,7 @@ function fuzzyTextFilterFn(rows: any, id: any, filterValue: any) {
 // Let the table remove the filter if the string is empty
 fuzzyTextFilterFn.autoRemove = (val: any) => !val
 
-function Table({ columns, data }: { columns: any, data: any }) {
+function Table({ columns, data }) {
 
     const filterTypes = React.useMemo(
         () => ({

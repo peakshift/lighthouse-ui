@@ -48,11 +48,11 @@ export default class ListBeacons extends React.Component<IAppProps, IAppState> {
         return (
             <div>
                 <section>
-                    <h1><Link to="/list-beacons">Beacon Chain List</Link></h1>
+                    <h1><Link to="/beacons/list">Beacon Chain List</Link></h1>
                     <h4>Connected Peers: 540</h4>
                     <h5>Sync Status: Synced</h5>
                     <p>Connected Valicators: 16,530</p>
-                    <Link to="/connect-validator"><button className="button-actions">Connect Validator</button></Link>
+                    <Link to="/validators/connect"><button className="button-actions">Connect Validator</button></Link>
                     <List />
                 </section>
             </div>
