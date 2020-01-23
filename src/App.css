@@ -237,3 +237,12 @@ input {
   margin: 0;
 }
 
+.large-staker {
+   width: 100%;
+   text-align: left;
+   line-height: 1.5rem;
+}
+   .large-staker td {
+      border-top: 1px solid rgba(224, 224, 224, 1);
+      padding: 6px 10px;
+   }
