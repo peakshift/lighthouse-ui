@@ -8,7 +8,7 @@ import {
 import './App.css';
 
 import Start from "./components/Start";
-import AddBeacon from "./components/AddBeacon";
+import ConnectBeacon from "./components/ConnectBeacon";
 import ConnectValidator from "./components/ConnectValidator";
 import ListBeacons from "./components/ListBeacons";
 import ViewBeacon from "./components/ViewBeacon";
@@ -23,7 +23,7 @@ export default class App extends React.Component {
 		return (
 			<Router>
 				<Route path="/" exact component={Start} />
-				<Route path="/add-beacon" exact component={AddBeacon} />
+				<Route path="/add-beacon" exact component={ConnectBeacon} />
 				<Route path="/connect-validator" exact component={ConnectValidator} />
 				<Route path="/list-beacons" exact component={ListBeacons} />
 				<Route path="/view-beacon" exact component={ViewBeacon} />

@@ -2,7 +2,7 @@ import React from "react";
 import AppActions from "../actions/AppActions";
 import AppStore from "../stores/AppStore";
 
-export default class AddBeacon extends React.Component<IAppProps, IAppState> {
+export default class ConnectBeacon extends React.Component<IAppProps, IAppState> {
 
     public state: IAppState = AppStore.getValues();
 
