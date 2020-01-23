@@ -23,10 +23,11 @@ export default class App extends React.Component {
 		return (
 			<Router>
 				<Route path="/" exact component={Start} />
-				<Route path="/add-beacon" exact component={ConnectBeacon} />
+				<Route path="/start" exact component={Start} />
+				<Route path="/beacons/new" exact component={ConnectBeacon} />
+				<Route path="/beacons/view/mr-poopy-butthole" exact component={ViewBeacon} />
 				<Route path="/connect-validator" exact component={ConnectValidator} />
 				<Route path="/list-beacons" exact component={ListBeacons} />
-				<Route path="/view-beacon" exact component={ViewBeacon} />
 				<Route path="/add-validator" exact component={AddValidator} />
 				<Route path="/list-validators" exact component={ListValidators} />
 				<Route path="/view-validator" exact component={ViewValidator} />

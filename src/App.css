@@ -49,17 +49,31 @@ section {
    box-sizing: border-box;
    padding: 2rem;
    position: relative;
-   height: calc(100vh - 4rem);
+   height: 100vh;
 }
 
 h1 {
    font-size: 24px;
 }
 
+a {
+  color: #0000FF;
+}
+
 ol.unstyle {
    list-style: none inside;
    padding-left: 0;
 }
+
+.masthead {
+  display: flex;
+}
+  .masthead nav {
+    text-align: right;
+  }
+  .masthead > * {
+    flex-grow: 1;
+  }
 
 .button {
    background-color: #ddd;
@@ -108,7 +122,7 @@ ol.unstyle {
 }
 
 input {
-   border-radius: 5px;
+   border-radius: 3px;
    width: 100%;
    border: 1px solid #ddd;
    padding: 15px;
@@ -119,32 +133,39 @@ input {
 .text {
 }
 
+.text-large {
+   font-size: 2rem;
+}
+
 .actions {
    text-align: right;
    position: absolute;
    bottom: 2rem;
    right: 2rem;
 }
+   .actions .button {
+      margin-left: 1rem;
+   }
 
 .status--ready {
    background: #2323ff;
    color: white;
    padding: 5px 10px;
-   border-radius: 5px;
+   border-radius: 3px;
 }
 
 .status--running {
    background: #009900;
    color: white;
    padding: 5px 10px;
-   border-radius: 5px;
+   border-radius: 3px;
 }
 
 .status--stopped {
    background: #b81515;
    color: white;
    padding: 5px 10px;
-   border-radius: 5px;
+   border-radius: 3px;
 }
 .tags {
    background: #888;
@@ -157,5 +178,5 @@ input {
    background: #555;
    color: white;
    padding: 5px 10px;
-   border-radius: 5px;
+   border-radius: 3px;
 }

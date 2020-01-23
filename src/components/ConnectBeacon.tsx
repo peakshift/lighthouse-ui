@@ -10,6 +10,7 @@ export default class ConnectBeacon extends React.Component<IAppProps, IAppState>
         super(props);
         this.handleStateChange = this.handleStateChange.bind(this);
         this.handleNext = this.handleNext.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     componentWillMount() {
@@ -30,7 +31,11 @@ export default class ConnectBeacon extends React.Component<IAppProps, IAppState>
     }
 
     handleNext(): void {
-        this.props.history.push("/view-beacon");
+        this.props.history.push("/beacons/view/mr-poopy-butthole");
+    }
+
+    handleCancel(): void {
+        this.props.history.push("/start");
     }
 
     handleChange(event: any) {
@@ -42,20 +47,26 @@ export default class ConnectBeacon extends React.Component<IAppProps, IAppState>
         return (
             <section>
                 <article className="text">
-                    <h1>Connect to a Beacon Chain node</h1>
-                    <p><input type="text" placeholder="Name" onChange={this.handleChange} /*value={ this.state.account!.beaconName }*/ /></p>
-                    <p><input type="text" placeholder="REST API" onChange={this.handleChange} /*value={ this.state.account!.beaconAPI }*/ /></p>
-                    {/* <textarea
-                        placeholder="Separate each word with a single space"
-                        value={this.state.account!.privateKeySeed}
-                        onChange={this.handleChange}
-                    /> */}
+                    <h1>Connect to a new Beacon Chain node</h1>
+                    <p>
+                        <strong>NAME</strong><br/>
+                        <input type="text" placeholder="Name this cluster" onChange={this.handleChange} />
+                    </p>
+                    <p>
+                        <strong>REST API</strong><br/>
+                        <input type="text" placeholder="http://localhost:5052" onChange={this.handleChange} />
+                    </p>
                 </article>
                 <nav className="actions">
                     <button
+                        className="button"
+                        onClick={this.handleCancel}>
+                        Cancel
+                    </button>
+                    <button
                         className="button button--primary"
                         onClick={this.handleNext}>
-                        Next
+                        Connect
 					</button>
                 </nav>
             </section>

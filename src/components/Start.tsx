@@ -39,15 +39,15 @@ export default class Start extends React.Component<IAppProps, IAppState> {
 	}
 
 	handleNext(): void {
-		this.props.history.push("/add-beacon");
+		this.props.history.push("/beacons/new");
 	}
 
 	public render() {
 		return (
 			<section>
 				<article className="text">
-					<h1>Get started</h1>
-					<p>The Lighthouse UI allows you to monitor and manage your lighthouse beacon nodes and validator clients.</p>
+					<h1>Welcome to LightSpeed&trade;</h1>
+					<p className="text-large">We created this tool to give you quickest way to <u>manage</u> and <u>monitor</u> from your Lighthouse Beacon Nodes and Validator Clients.</p>
 
 					<p>Step 1</p>
 					<button
@@ -60,7 +60,7 @@ export default class Start extends React.Component<IAppProps, IAppState> {
 					<button
 						className="button"
 						onClick={this.handleSecondaryAction}>
-						Create a Validator
+						Connect a Validator Client
 					</button>
 
 					<p>Step 3</p>

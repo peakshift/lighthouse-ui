@@ -36,7 +36,7 @@ export default class ViewBeacon extends React.Component<IAppProps, IAppState> {
     }
 
     handleNext(): void {
-        //this.props.history.push("/add-validator");
+        this.props.history.push("/add-validator");
     }
 
     handleChange(event: any) {
@@ -48,8 +48,25 @@ export default class ViewBeacon extends React.Component<IAppProps, IAppState> {
         return (
             <div>
                 <section>
-                    <h1><Link to="/list-beacons">Beacon Chain List</Link> / Beacon Name</h1>
-                    <Link to="/add-validator"><button className="button-actions">Create Validator</button></Link>
+                    <header className="masthead">
+                        <h1><Link to="/beacons">Beacon Chain Nodes</Link> / Mr Poopy Butthole</h1>
+                        <nav>
+                            <button
+                                className="button button--primary"
+                                onClick={this.handleNext}>
+                                Connect Validator Client
+                            </button>
+                        </nav>
+                    </header>
+                    <p>
+                        <ul>
+                            <li>Version: Lighthouse/v0.1.0-unstable/x86_64-macos</li>
+                            <li>Connected Peers: ___</li>
+                            <li>Syncing State: <span className="badge">SYNC_STATE</span></li>
+                            <li>Disk Usage</li>
+                            <li>Connected Validators #</li>
+                        </ul>
+                    </p>
                 </section>
             </div>
         );
