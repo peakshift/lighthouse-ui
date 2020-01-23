@@ -57,7 +57,7 @@ h1 {
 }
 
 a {
-  color: #0000FF;
+   color: #0000ff;
 }
 
 ol.unstyle {
@@ -66,14 +66,14 @@ ol.unstyle {
 }
 
 .masthead {
-  display: flex;
+   display: flex;
 }
-  .masthead nav {
-    text-align: right;
-  }
-  .masthead > * {
-    flex-grow: 1;
-  }
+.masthead nav {
+   text-align: right;
+}
+.masthead > * {
+   flex-grow: 1;
+}
 
 .button {
    background-color: #ddd;
@@ -143,9 +143,9 @@ input {
    bottom: 2rem;
    right: 2rem;
 }
-   .actions .button {
-      margin-left: 1rem;
-   }
+.actions .button {
+   margin-left: 1rem;
+}
 
 .status--ready {
    background: #2323ff;
@@ -179,4 +179,16 @@ input {
    color: white;
    padding: 5px 10px;
    border-radius: 3px;
+}
+
+.graph-holder {
+   display: flex;
+   flex-direction: row;
+   align-items: baseline;
+   margin: 1rem 0;
+   padding: 1rem;
+   box-sizing: border-box;
+}
+.graph-holder p {
+   font-weight: bold;
 }

@@ -72,6 +72,10 @@ function List() {
                         accessor: 'status',
                     },
                     {
+                        Header: 'Balance',
+                        accessor: 'effective_balance',
+                    },
+                    {
                         Header: 'Tags',
                         accessor: 'tags',
                     },
