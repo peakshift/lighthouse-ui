@@ -213,7 +213,6 @@ input {
    flex-direction: row;
    align-items: baseline;
    margin: 1rem 0;
-   padding: 1rem;
    box-sizing: border-box;
 }
 .graph-holder p {

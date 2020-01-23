@@ -33,14 +33,14 @@ export default class AddValidator extends React.Component<IAppProps, IAppState> 
     }
 
     handleNext(): void {
-        this.props.history.push("/add-validator");
+        this.props.history.push("/validators/xyz/0x0000000000000000000000000000000000000000");
     }
 
     public render() {
         return (
             <section>
                 <article className="text">
-                    <h1><Link to="/list-beacons">Beacon Chain List</Link> / <Link to="/view-beacon">Beacon Name</Link> / Connect Validator</h1>
+                    <h1><Link to="/beacons/list">Beacon Chain List</Link> / <Link to="/beacons/view/mr-poopy-butthole">Beacon Name</Link> / Connect Validator</h1>
                     <p><input type="text" placeholder="Name" /></p>
                     <p><input type="text" placeholder="Deposit Value" /></p>
                     <p><input type="text" placeholder="Eth1 Deposit Node" /></p>
