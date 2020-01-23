@@ -47,7 +47,7 @@ export default class ConnectBeacon extends React.Component<IAppProps, IAppState>
         return (
             <section>
                 <article className="text">
-                    <h1>Connect to a new Beacon Chain node</h1>
+                    <h1>Connect to a new Beacon node</h1>
                     <p>
                         <strong>NAME</strong><br/>
                         <input type="text" placeholder="Name this cluster" onChange={this.handleChange} />

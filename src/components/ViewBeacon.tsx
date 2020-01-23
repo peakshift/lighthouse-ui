@@ -49,7 +49,7 @@ export default class ViewBeacon extends React.Component<IAppProps, IAppState> {
             <div>
                 <section>
                     <header className="masthead">
-                        <h1><Link to="/beacons">Beacon Chain Nodes</Link> / Mr Poopy Butthole</h1>
+                        <h1><Link to="/beacons">Beacon Nodes</Link> / Mr Poopy Butthole</h1>
                         <nav>
                             <button
                                 className="button button--primary"
