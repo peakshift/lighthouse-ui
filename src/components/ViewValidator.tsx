@@ -76,7 +76,25 @@ export default class ViewValidator extends React.Component<IAppProps, IAppState>
         return (
             <div>
                 <section>
-                    <h2><Link to="/beacons/list">Beacon List</Link> / <Link to="/beacons/view/mr-poopy-butthole">Beacon Name</Link> / View Validator</h2>
+                    <h2><Link to="/beacons/list">Beacon List</Link> / <Link to="/beacons/view/mr-poopy-butthole">Mr Poopy Butthole</Link> / View Validator</h2>
+                    <div className="aggregates">
+                        <article>
+                            <h6>Initail Deposit</h6>
+                            <p>32 Eth</p>
+                        </article>
+                        <article>
+                            <h6>Total Earnings</h6>
+                            <p>123</p>
+                        </article>
+                        <article>
+                            <h6>Active</h6>
+                            <p>Yes</p>
+                        </article>
+                        <article>
+                            <h6>Slashed</h6>
+                            <p>No</p>
+                        </article>
+                    </div>
                     <div className="graph-holder">
                         <div>
                             {renderBarChart1}

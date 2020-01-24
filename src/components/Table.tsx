@@ -1,8 +1,8 @@
 import React from "react";
 
-export function Table(data: Array<{value: any}>) {
+export default function Table(data: Array<{value: any}>) {
 	return(
-		<table>
+		<table className="large-staker">
 			<thead>
 				<tr>
 					<th>Name</th>

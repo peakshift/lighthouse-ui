@@ -37,7 +37,7 @@ export default class ListBeacons extends React.Component<IAppProps, IAppState> {
 	}
 
 	handleNext(): void {
-		//this.props.history.push("/add-validator");
+		this.props.history.push("/validators/connect");
 	}
 
 	handleChange(event: any) {
