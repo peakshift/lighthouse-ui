@@ -1,6 +1,9 @@
 {
   "name": "lighthouse-ui",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.13.0"
+  },
   "private": false,
   "scripts": {
     "start": "react-scripts start",
