@@ -16,20 +16,20 @@ export default class ConnectValidator extends React.Component<IAppProps, IAppSta
     }
 
     componentWillMount() {
-        AppStore.on("update_app_store", this.handleStateChange);
+        // AppStore.on("update_app_store", this.handleStateChange);
     }
 
     componentWillUnmount() {
-        AppStore.off(
-            "update_app_store",
-            this.handleStateChange
-        );
+        // AppStore.off(
+        //     "update_app_store",
+        //     this.handleStateChange
+        // );
     }
 
     handleStateChange(): any {
-        return this.setState(
-            AppStore.getValues()
-        );
+        // return this.setState(
+        //     AppStore.getValues()
+        // );
     }
 
     handleNext(): void {

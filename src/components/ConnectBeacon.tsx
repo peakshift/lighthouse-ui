@@ -14,20 +14,20 @@ export default class ConnectBeacon extends React.Component<IAppProps, IAppState>
     }
 
     componentWillMount() {
-        AppStore.on("update_app_store", this.handleStateChange);
+        // AppStore.on("update_app_store", this.handleStateChange);
     }
 
     componentWillUnmount() {
-        AppStore.off(
-            "update_app_store",
-            this.handleStateChange
-        );
+        // AppStore.off(
+        //     "update_app_store",
+        //     this.handleStateChange
+        // );
     }
 
     handleStateChange(): any {
-        return this.setState(
-            AppStore.getValues()
-        );
+        // return this.setState(
+        //     AppStore.getValues()
+        // );
     }
 
     handleNext(): void {
@@ -54,11 +54,11 @@ export default class ConnectBeacon extends React.Component<IAppProps, IAppState>
                         <p><a href="https://lighthouse-book.sigmaprime.io/simple-testnet.html" target="_blank">Documentation</a></p>
                     </div>
                     <p>
-                        <strong>NAME</strong><br/>
+                        <strong>NAME</strong><br />
                         <input type="text" placeholder="Name this cluster" onChange={this.handleChange} />
                     </p>
                     <p>
-                        <strong>REST API</strong><br/>
+                        <strong>REST API</strong><br />
                         <input type="text" placeholder="http://localhost:5052" onChange={this.handleChange} />
                     </p>
                 </article>

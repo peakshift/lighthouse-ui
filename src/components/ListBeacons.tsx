@@ -1,6 +1,6 @@
 import React from "react";
 import {
-	Link
+    Link
 } from "react-router-dom";
 import AppActions from "../actions/AppActions";
 import AppStore from "../stores/AppStore";
@@ -10,42 +10,42 @@ import Table from "./Table";
 
 export default class ListBeacons extends React.Component<IAppProps, IAppState> {
 
-	public state: IAppState = AppStore.getValues();
+    public state: IAppState = AppStore.getValues();
 
-	constructor(props: IAppProps, state: IAppState) {
-		super(props);
-		this.handleStateChange = this.handleStateChange.bind(this);
-		this.handleNext = this.handleNext.bind(this);
-		//this.App = this.App.bind(this);
-	}
+    constructor(props: IAppProps, state: IAppState) {
+        super(props);
+        this.handleStateChange = this.handleStateChange.bind(this);
+        this.handleNext = this.handleNext.bind(this);
+        //this.App = this.App.bind(this);
+    }
 
-	componentWillMount() {
-		AppStore.on("update_app_store", this.handleStateChange);
-	}
+    componentWillMount() {
+        // AppStore.on("update_app_store", this.handleStateChange);
+    }
 
-	componentWillUnmount() {
-		AppStore.off(
-			"update_app_store",
-			this.handleStateChange
-		);
-	}
+    componentWillUnmount() {
+        // AppStore.off(
+        // 	"update_app_store",
+        // 	this.handleStateChange
+        // );
+    }
 
-	handleStateChange(): any {
-		return this.setState(
-			AppStore.getValues()
-		);
-	}
+    handleStateChange(): any {
+        // return this.setState(
+        // 	AppStore.getValues()
+        // );
+    }
 
-	handleNext(): void {
-		this.props.history.push("/validators/connect");
-	}
+    handleNext(): void {
+        this.props.history.push("/validators/connect");
+    }
 
-	handleChange(event: any) {
-		let value = event.target.value;
-		//AppActions.saveKeyToStore(value);
-	}
+    handleChange(event: any) {
+        let value = event.target.value;
+        //AppActions.saveKeyToStore(value);
+    }
 
-	public render() {
+    public render() {
 
         let list = [
             {
@@ -80,37 +80,37 @@ export default class ListBeacons extends React.Component<IAppProps, IAppState> {
             },
         ];
 
-		return (
-			<div>
-				<section>
-					<header className="masthead">
-						<h1>Beacon Nodes &mdash; Overview</h1>
-						<nav>
-							<button
-								className="button button--primary"
-								onClick={this.handleNext}>
-								Connect Beacon Node
+        return (
+            <div>
+                <section>
+                    <header className="masthead">
+                        <h1>Beacon Nodes &mdash; Overview</h1>
+                        <nav>
+                            <button
+                                className="button button--primary"
+                                onClick={this.handleNext}>
+                                Connect Beacon Node
 							</button>
-						</nav>
-					</header>
-					<div className="aggregates">
-						<article>
-							<h6>Total Peers</h6>
-							<p>123</p>
-						</article>
-						<article>
-							<h6>Total Peers</h6>
-							<p>123</p>
-						</article>
-						<article>
-							<h6>Total Peers</h6>
-							<p>123</p>
-						</article>
-						<article>
-							<h6>Total Peers</h6>
-							<p>123</p>
-						</article>
-					</div>
+                        </nav>
+                    </header>
+                    <div className="aggregates">
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
+                        <article>
+                            <h6>Total Peers</h6>
+                            <p>123</p>
+                        </article>
+                    </div>
                     <h6>Filters</h6>
                     <ul>
                         <li><a href="">Tags</a></li>
@@ -421,8 +421,8 @@ export default class ListBeacons extends React.Component<IAppProps, IAppState> {
                             </tr>
                         </tbody>
                     </table>
-				</section>
-			</div>
-		);
-	}
+                </section>
+            </div>
+        );
+    }
 }
