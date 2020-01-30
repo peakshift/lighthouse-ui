@@ -181,32 +181,31 @@ input {
    border-radius: 3px;
 }
 
-
 .aggregates {
-  display: flex;
-  margin-left: -1rem;
-  margin-bottom: 2rem;
+   display: flex;
+   margin-left: -1rem;
+   margin-bottom: 2rem;
 }
 
-  .aggregates article {
-    flex-grow: 1;
-    background: #EFEFEF;
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    padding: 1rem;
-    margin-left: 1rem;
-  }
+.aggregates article {
+   flex-grow: 1;
+   background: #efefef;
+   border: 1px solid #c4c4c4;
+   border-radius: 3px;
+   padding: 1rem;
+   margin-left: 1rem;
+}
 
-  .aggregates h6 {
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .aggregates p {
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-  }
+.aggregates h6 {
+   text-transform: uppercase;
+   margin: 0;
+}
+.aggregates p {
+   text-transform: uppercase;
+   font-size: 2rem;
+   font-weight: bold;
+   margin: 0;
+}
 
 .graph-holder {
    display: flex;
@@ -220,29 +219,30 @@ input {
 }
 
 .banner {
-  background-color: #FFF4D8;
-  color: #333;
-  border: 1px solid #FFEEC3;
-  padding: 1rem;
-  border-radius: 3px;
-  margin: 1rem 0;
-  font-size: 0.8rem;
+   background-color: #fff4d8;
+   color: #333;
+   border: 1px solid #ffeec3;
+   padding: 1rem;
+   border-radius: 3px;
+   margin: 1rem 0;
+   font-size: 0.8rem;
 }
 
 .banner h4 {
-  text-transform: uppercase;
+   text-transform: uppercase;
 }
 
 .banner * {
-  margin: 0;
+   margin: 0;
 }
 
 .large-staker {
    width: 100%;
    text-align: left;
    line-height: 1.5rem;
+   border-collapse: collapse;
 }
-   .large-staker td {
-      border-top: 1px solid rgba(224, 224, 224, 1);
-      padding: 6px 10px;
-   }
+.large-staker td {
+   border-top: 1px solid rgba(224, 224, 224, 1);
+   padding: 6px 10px;
+}
