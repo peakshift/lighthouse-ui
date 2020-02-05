@@ -43,40 +43,47 @@ export default class ViewValidator extends React.Component<IAppProps, IAppState>
         super(props);
         this.handleStateChange = this.handleStateChange.bind(this);
         this.handleNext = this.handleNext.bind(this);
-        //this.App = this.App.bind(this);
     }
 
     componentWillMount() {
-        // AppStore.on("update_app_store", this.handleStateChange);
+        AppStore.on("update_app_store", this.handleStateChange);
     }
 
     componentWillUnmount() {
-        // AppStore.off(
-        //     "update_app_store",
-        //     this.handleStateChange
-        // );
+        AppStore.off(
+            "update_app_store",
+            this.handleStateChange
+        );
     }
 
     handleStateChange(): any {
-        // return this.setState(
-        //     AppStore.getValues()
-        // );
+        return this.setState(
+            AppStore.getValues()
+        );
     }
 
     handleNext(): void {
-        //this.props.history.push("/add-validator");
+        this.props.history.push("/validators/xyz/0x0000000000000000000000000000000000000000/deposit");
     }
 
     handleChange(event: any) {
         let value = event.target.value;
-        //AppActions.saveKeyToStore(value);
     }
 
     public render() {
         return (
             <div>
                 <section>
-                    <h2><Link to="/validators">Validator Clients</Link> / <Link to="/validators/xyz">XYZ</Link> / 0x0000000000000000000000000000000000000000</h2>
+                    <header className="masthead">
+                        <h2><Link to="/validators">Validator Clients</Link> / <Link to="/validators/xyz">XYZ</Link> / 0x0000000000000000000000000000000000000000</h2>
+                        <nav className="space-left">
+                            <button
+                                className="button button--primary"
+                                onClick={this.handleNext}>
+                                Deposit (Balance: 31.9ETH)
+                            </button>
+                        </nav>
+                    </header>
                     <div className="aggregates">
                         <article>
                             <h6>Initail Deposit</h6>

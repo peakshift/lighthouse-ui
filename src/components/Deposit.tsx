@@ -36,6 +36,10 @@ export default class Deposit extends React.Component<IAppProps, IAppState> {
 		alert("Not implemented.")
 	}
 
+	handleCancel(): void {
+		this.props.history.push("/validators/xyz/0x0000000000000000000000000000000000000000");
+	}
+
 	public render() {
 		return (
 			<section>
@@ -49,6 +53,11 @@ export default class Deposit extends React.Component<IAppProps, IAppState> {
 					<p><input type="text" placeholder="Deposit Data Root" /></p>
 				</article>
 				<nav className="actions">
+					<button
+						className="button"
+						onClick={this.handleCancel}>
+						Cancel
+					</button>
 					<button
 						className="button button--primary"
 						onClick={this.handleNext}>

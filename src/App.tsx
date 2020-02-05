@@ -16,6 +16,7 @@ import AddValidator from "./components/AddValidator";
 import ListValidatorClients from "./components/ListValidatorClients";
 import ViewValidator from "./components/ViewValidator";
 import ViewValidatorClient from "./components/ViewValidatorClient";
+import Deposit from "./components/Deposit";
 
 import AppStore from "./stores/AppStore";
 
@@ -34,6 +35,7 @@ export default class App extends React.Component {
 				<Route path="/validators/xyz" exact component={ViewValidatorClient} />
 				<Route path="/validators/new" exact component={AddValidator} />
 				<Route path="/validators/xyz/0x0000000000000000000000000000000000000000" exact component={ViewValidator} />
+				<Route path="/validators/xyz/0x0000000000000000000000000000000000000000/deposit" exact component={Deposit} />
 			</Router>
 		);
 	}
