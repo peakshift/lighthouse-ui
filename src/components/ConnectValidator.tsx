@@ -45,7 +45,7 @@ export default class AddValidator extends React.Component<IAppProps, IAppState> 
         return (
             <section>
                 <article className="text">
-                    <h2><Link to="/validators">Manage Validators</Link> / Connect Validator Client</h2>
+                    <h2><Link to="/validators">Validator Clients</Link> / Connect Validator Client</h2>
                     <p>
                         <strong>NAME</strong><br />
                         <input type="text" placeholder="Name" />

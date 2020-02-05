@@ -61,25 +61,25 @@ export default class ListValidatorClients extends React.Component<IAppProps, IAp
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>Validators</th>
+                                <th>Active</th>
+                                <th>Inactive</th>
                                 <th>...</th>
                                 <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
+                                <th>Total Earnings</th>
+                                <th>Client Version</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>Name</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
-                                <th>...</th>
+                                <td><Link to="/validators/xyz">XYZ</Link></td>
+                                <td>8</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>1.68 ETH</td>
+                                <td>Lighthouse/v0.1.0-unstable</td>
                             </tr>
                         </tbody>
                     </table>

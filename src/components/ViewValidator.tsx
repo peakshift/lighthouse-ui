@@ -76,7 +76,7 @@ export default class ViewValidator extends React.Component<IAppProps, IAppState>
         return (
             <div>
                 <section>
-                    <h2>Validators / {"{Client Name}"} / 0x0000000000000000000000000000000000000000</h2>
+                    <h2><Link to="/validators">Validator Clients</Link> / <Link to="/validators/xyz">XYZ</Link> / 0x0000000000000000000000000000000000000000</h2>
                     <div className="aggregates">
                         <article>
                             <h6>Initail Deposit</h6>
