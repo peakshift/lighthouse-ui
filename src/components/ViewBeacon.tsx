@@ -37,7 +37,7 @@ export default class ViewBeacon extends React.Component<IAppProps, IAppState> {
     }
 
     handleNext(): void {
-        this.props.history.push("/validators/new");
+        this.props.history.push("/validators/connect");
     }
 
     handleChange(event: any) {

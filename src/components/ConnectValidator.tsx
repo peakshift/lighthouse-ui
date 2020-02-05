@@ -13,47 +13,67 @@ export default class AddValidator extends React.Component<IAppProps, IAppState> 
         super(props);
         this.handleStateChange = this.handleStateChange.bind(this);
         this.handleNext = this.handleNext.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     componentWillMount() {
-        // AppStore.on("update_app_store", this.handleStateChange);
+        AppStore.on("update_app_store", this.handleStateChange);
     }
 
     componentWillUnmount() {
-        // AppStore.off(
-        //     "update_app_store",
-        //     this.handleStateChange
-        // );
+        AppStore.off(
+            "update_app_store",
+            this.handleStateChange
+        );
     }
 
     handleStateChange(): any {
-        // return this.setState(
-        //     AppStore.getValues()
-        // );
+        return this.setState(
+            AppStore.getValues()
+        );
     }
 
     handleNext(): void {
-        this.props.history.push("/validators/xyz/0x0000000000000000000000000000000000000000");
+        this.props.history.push("/validators/xyz");
+    }
+
+    handleCancel(): void {
+        this.props.history.push("/start");
     }
 
     public render() {
         return (
             <section>
                 <article className="text">
-                    <h1><Link to="/beacons/list">Beacon Chain List</Link> / <Link to="/beacons/view/mr-poopy-butthole">Beacon Name</Link> / Connect Validator</h1>
-                    <p><input type="text" placeholder="Name" /></p>
-                    <p><input type="text" placeholder="Deposit Value" /></p>
-                    <p><input type="text" placeholder="Eth1 Deposit Node" /></p>
-                    <p><input type="text" placeholder="Password" /></p>
-                    <p><input type="text" placeholder="Private Key" /></p>
-                    <p><input type="text" placeholder="Tags" /></p>
+                    <h2><Link to="/validators">Manage Validators</Link> / Connect Validator Client</h2>
+                    <p>
+                        <strong>NAME</strong><br />
+                        <input type="text" placeholder="Name" />
+                    </p>
+                    <p>
+                        <strong>REST API</strong><br />
+                        <input type="text" placeholder="http://localhost:5054" />
+                    </p>
+                    <p>
+                        <strong>SESSION TOKEN</strong><br />
+                        <input type="text" placeholder="Session Token" />
+                    </p>
+                    <p>
+                        <strong>TAGS</strong><br />
+                        <input type="text" placeholder="Tags" />
+                    </p>
                 </article>
                 <nav className="actions">
                     <button
+                        className="button"
+                        onClick={this.handleCancel}>
+                        Cancel
+                    </button>
+                    <button
                         className="button button--primary"
                         onClick={this.handleNext}>
-                        Next
-					</button>
+                        Connect
+                    </button>
                 </nav>
             </section>
         );

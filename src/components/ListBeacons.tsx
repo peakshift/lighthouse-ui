@@ -16,33 +16,36 @@ export default class ListBeacons extends React.Component<IAppProps, IAppState> {
         super(props);
         this.handleStateChange = this.handleStateChange.bind(this);
         this.handleNext = this.handleNext.bind(this);
-        //this.App = this.App.bind(this);
+        this.handleManageValidators = this.handleManageValidators.bind(this);
     }
 
     componentWillMount() {
-        // AppStore.on("update_app_store", this.handleStateChange);
+        AppStore.on("update_app_store", this.handleStateChange);
     }
 
     componentWillUnmount() {
-        // AppStore.off(
-        // 	"update_app_store",
-        // 	this.handleStateChange
-        // );
+        AppStore.off(
+            "update_app_store",
+            this.handleStateChange
+        );
     }
 
     handleStateChange(): any {
-        // return this.setState(
-        // 	AppStore.getValues()
-        // );
+        return this.setState(
+            AppStore.getValues()
+        );
     }
 
     handleNext(): void {
         this.props.history.push("/validators/connect");
     }
 
+    handleManageValidators(): void {
+        this.props.history.push("/validators");
+    }
+
     handleChange(event: any) {
         let value = event.target.value;
-        //AppActions.saveKeyToStore(value);
     }
 
     public render() {
@@ -85,7 +88,12 @@ export default class ListBeacons extends React.Component<IAppProps, IAppState> {
                 <section>
                     <header className="masthead">
                         <h1>Beacon Nodes &mdash; Overview</h1>
-                        <nav>
+                        <nav className="space-left">
+                            <button
+                                className="button"
+                                onClick={this.handleManageValidators}>
+                                Manage Validators
+                            </button>
                             <button
                                 className="button button--primary"
                                 onClick={this.handleNext}>

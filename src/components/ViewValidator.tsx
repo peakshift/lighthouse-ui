@@ -76,7 +76,7 @@ export default class ViewValidator extends React.Component<IAppProps, IAppState>
         return (
             <div>
                 <section>
-                    <h2><Link to="/beacons/list">Beacon List</Link> / <Link to="/beacons/view/mr-poopy-butthole">Mr Poopy Butthole</Link> / View Validator</h2>
+                    <h2>Validators / {"{Client Name}"} / 0x0000000000000000000000000000000000000000</h2>
                     <div className="aggregates">
                         <article>
                             <h6>Initail Deposit</h6>
