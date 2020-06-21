@@ -6,11 +6,13 @@ import dispacter from "../dispatcher";
 
 class AppStore extends EventEmitter implements IAppStoreClass {
    public someStateValue: number;
+   public beaconNodes: Array<BeaconNode>;
 
    constructor() {
       super();
       // set defaul values
       this.someStateValue = 0;
+      this.beaconNodes = new Array();
    }
 
    /**
@@ -19,6 +21,7 @@ class AppStore extends EventEmitter implements IAppStoreClass {
     */
    resetStore(): void {
       this.someStateValue = 0;
+      this.beaconNodes = new Array();
       this.emit("update_app_store");
    }
 
@@ -27,9 +30,10 @@ class AppStore extends EventEmitter implements IAppStoreClass {
     * @return {IAppState}
     */
    getValues(): IAppState {
-      // return {
-      // 	someStateValue: this.someStateValue,
-      // };
+      return {
+      	someStateValue: this.someStateValue,
+        beaconNodes: this.beaconNodes,
+      };
    }
 
    handleActions(action: any): void {
